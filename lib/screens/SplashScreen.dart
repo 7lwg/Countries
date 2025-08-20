@@ -32,6 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
     context.read<CountriesCubit>().getCountries();
     Future.delayed(const Duration(seconds: 5), () async {
       Navigator.pushReplacement(
+        // ignore: use_build_context_synchronously
         context,
         MaterialPageRoute<void>(
           builder: (BuildContext context) => const Countries(),
